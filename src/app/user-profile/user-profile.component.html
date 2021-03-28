@@ -1,0 +1,52 @@
+<div *ngIf="userDetails" class="table-fill">
+
+                
+
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-xl-6 col-md-12">
+                    <div class="card user-card-full">
+                        <div class="row m-l-0 m-r-0">
+                            <div class="col-sm-4 bg-c-lite-green user-profile">
+                                <div class="card-block text-center text-white">
+                                    <div class="m-b-25"> <img [src]="userDetails.userImage"   class="img-radius" alt="User-Profile-Image"> </div>
+                                    <h6 class="f-w-600">{{userDetails.name}}</h6>
+                                    <p>Web Designer</p> <i
+                                        class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                       <img routerLink="/editprofile" style="cursor: pointer;" src="data:image/png;base64,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"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="card-block">
+                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Email</p>
+                                            <h6 class="text-muted f-w-400">{{userDetails.email}}</h6>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Gender</p>
+                                            <h6 class="text-muted f-w-400">{{userDetails.gender}}</h6>
+                                        </div>
+                                    </div>
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Other</h6>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <button (click)="onSelectUserOrder()">Orders</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <button  (click)="onLogout()">LogOut</button>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
